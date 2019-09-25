@@ -1,0 +1,25 @@
+{
+    "name": "TormentaMental/GoGameApp",
+    "description": "Go Game App",
+    "type": "App",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TormentaMental/GoGame"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.10",
+        "monolog/monolog": "^1.23",
+        "slim/php-view": "^2.2",
+        "TormentaMental/GoGame": "master"
+    },
+    "autoload": {
+        "psr-0": {
+            "classes\\": "src/",
+            "helpers\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

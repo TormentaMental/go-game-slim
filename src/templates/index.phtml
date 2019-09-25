@@ -1,0 +1,34 @@
+<?php use \helpers\Board; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+</head>
+	
+	<div style="width: 50%; float: left;" >
+
+		<?= Board::draw($boardIntersections, $whoPlaysNext) ?>
+
+	</div>
+	<div style="width: 50%; float: left;" >
+		<h1>Go Game</h1>
+
+		<p><b>Puntaje Negro:</b> <?=$blackScore?></p>
+		<p><b>Puntaje Blanco:</b> <?=$whiteScore?></p>
+		<p>Es el turno del jugador: <b><?= Board::t($whoPlaysNext) ?></b></p>
+		<a href="/reset" >Reset</a>
+
+		<?php if(!empty($error)):?>
+			<h3 style="color:red;" >Error: <b><?= $error ?></b></h3>
+		<?php endif;?>
+
+	</div>
+
+	
+	
+
+</body>
+
+</html>
